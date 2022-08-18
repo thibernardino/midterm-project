@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contactSection {
+    padding: 0 30px;
+    margin: 80px 0 100px;
+}
+
+.contactSection > h1 {
+    font-size: 2.5em;
+    margin: 50px 0 40px;
+}
+
+.contact_form {
+    display: grid;
+    max-width: 100%;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "name  "
+        "email "
+        "phone"
+        "message "
+        "btn ";
+}
+
+.name {
+    grid-area: name;
+}
+.email {
+    grid-area: email;
+}
+.phone {
+    grid-area: phone;
+}
+.message {
+    grid-area: message;
+}
+
+.label_input_wraper {
+    display: flex;
+    flex-direction: column;
+}
+.contact-title {
+    margin-bottom: 15px;
+    color: #6b708d;
+    font-size: 1.25em;
+    font-weight: 400;
+}
+.contact_text-field {
+    width: 100%;
+    height: 70px;
+    padding-left: 20px;
+    border: none;
+    background-color: rgba(107, 112, 141, 0.1);
+}
+.contact_text-field:focus {
+    outline: none;
+    border: 1px solid #f2f4fc;
+    box-shadow: 0 0 5px #6b708d;
+}
+.textTarea_field {
+    height: 200px;
+    resize: none;
+    padding-top: 20px;
+}
+.textTarea_field::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    /* padding-top: 30px; */
+    /* text-indent: 20px; */
+}
+
+.btnForm {
+    background-color: #072ac8;
+    height: 80px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
+    grid-area: btn;
+}
+.formDome {
+    color: green;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+.formFail {
+    color: red;
+    font-size: 1.5em;
+    margin-top: 20px;
+    display: none;
+}
+
+/* -MEDIA QUERIES- */
+
+@media only screen and (min-width: 768px) {
+    .contactSection {
+        margin: 100px 0 150px;
+    }
+    .contactSection > h1 {
+        margin-bottom: 120px;
+        font-size: 3.75em;
+    }
+
+    .contact_form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "name  name"
+            "email phone"
+            "message  message"
+            "btn btn";
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .contactSection {
+        padding: 0;
+        margin: 180px 0 100px;
+    }
+}
